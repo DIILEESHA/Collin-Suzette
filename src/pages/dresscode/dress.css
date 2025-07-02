@@ -1,0 +1,132 @@
+/* Gallery container styles */
+.gallery_viewer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 15px;
+  padding: 20px;
+/* From https://css.glass */
+background: rgba(226, 160, 160, 0.2);
+background: rgba(235, 229, 229, 0.2);
+
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Gallery item base styles */
+.gallery_suber {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Image container for hover effects */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 4%;
+  transition: transform 0.5s ease;
+}
+
+/* Hover effects */
+.gallery_suber:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery_suber:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.gallery_suber:hover .image-overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-caption {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.view-full {
+  font-size: 0.9rem;
+  font-family: "hel";
+  font-size: 20px;
+  opacity: 1;
+}
+
+/* Special grid items */
+.o { grid-row: span 2; }
+.t { grid-column: span 2; grid-row: span 2; }
+.f { grid-row: span 2; }
+.s { grid-row: span 2; }
+.e { grid-column: span 2; }
+
+/* Lightbox customizations */
+.yarl__root {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.9);
+}
+
+.yarl__slide_title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .gallery_viewer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.o,.e { grid-row: span 1; }
+
+
+
+.view-full{
+  font-size: 15px;
+}
+.gallery_viewer{
+  padding: 15px;
+  gap: 10px;
+}
+}
+
+@media (max-width: 576px) {
+  .gallery_viewer {
+    grid-template-columns:1fr 1fr;
+  }
+  .e{
+    grid-row: span 2;
+  }
+  .nv{
+    grid-column: 1/3;
+  }
+}

@@ -1,0 +1,61 @@
+:root {
+  --bc: #e8f2f8;;
+  --accent-color: #171511;
+}
+
+@font-face {
+  font-family: "silk";
+  src: url("./fonts/silk.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.custom-login-modal .ant-modal-content {
+  background-color: #000 !important;
+  color: #fff; /* Optional: make text white for readability */
+}
+
+.custom-login-modal .ant-modal-header {
+  background-color: #000 !important;
+  border-bottom: 1px solid #333;
+}
+
+.custom-login-modal .ant-modal-title {
+  color: #fff !important;
+}
+
+.custom-login-modal .ant-modal-close {
+  color: #fff !important;
+}
+
+@font-face {
+  font-family: "hel";
+  src: url("./fonts/hel2.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 0;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright{
+  font-family: "hel", sans-serif;
+  font-size: 15px!important;
+
+}
+
