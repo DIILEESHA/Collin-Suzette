@@ -38,14 +38,16 @@ const Header = () => {
       <div className="naughty">
         <div className="naughty_sub">
           <img
-            src="https://i.imgur.com/9odwY2h.jpeg"
+            src="https://i.imgur.com/XjhOnc0.png"
+
             alt=""
             className="naughty_img"
           />
         </div>
         <div className="naughty_sub">
           <img
-            src="https://i.imgur.com/AXpgvPB.jpeg"
+            src="https://i.imgur.com/nI07vvw.png"
+
             alt=""
             className="naughty_img"
           />
