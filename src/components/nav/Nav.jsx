@@ -28,7 +28,7 @@ const Nav = () => {
               <Link to="/story">Our Story</Link>
             </li>
             <li className="nav_li">
-              <Link to="/dress">Our Memories</Link>
+              <Link to="/memories">Our Memories</Link>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@ const Nav = () => {
             <Link to="/story">Our Story</Link>
           </li>
           <li onClick={toggleMobileMenu}>
-            <Link to="/dress">What to wear</Link>
+            <Link to="/memories">Our Memories</Link>
           </li>
           <li onClick={toggleMobileMenu}>
             <Link to="/faq">FAQ</Link>
